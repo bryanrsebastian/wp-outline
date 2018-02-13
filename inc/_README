@@ -1,0 +1,7 @@
+If you use this theme as a group create a file with the filename
+
+custom-*.php
+
+else if you are the only one
+
+custom.php

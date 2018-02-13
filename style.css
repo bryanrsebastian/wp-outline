@@ -1,0 +1,30 @@
+/*
+Theme Name: wp-outline
+Theme URI: https://github.com/bryan-sebastian/wp-outline
+Author: Bryan R. Sebastian
+Author URI: https://bryan-sebastian.github.io/
+Description: This theme "wp-outline" is a developer starter theme to develop a wordpress website
+Version: 1.0.0
+License: MIT License
+License URI: https://github.com/bryan-sebastian/wp-outline/blob/master/LICENSE.md
+Tags: Starter Theme, Developer Theme, Wordpress Theme
+Text Domain: wp-outline
+
+Important notes : 
+You can edit the details above depends on your website details.
+Remove the license MIT if your project is not opensource.
+
+Notes :
+Do not write a style in this file. 
+Please insert your style ( .scss ) on assets/style/partials
+then include it in general.scss
+
+What?! .scss? Yes! This theme support the sass to make your
+production faster and your css coding become beautiful.
+
+If you enjoy and think that this theme is so useful
+please star the repository of this theme at https://github.com/bryan-sebastian/wp-outline
+and follow me at https://github.com/bryan-sebastian
+
+Thank You very much! Enjoy!
+*/

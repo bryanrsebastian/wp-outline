@@ -1,0 +1,11 @@
+To use the sass functionality of this website and make it possible in live project just used the plugin
+
+WP-SCSS https://wordpress.org/plugins/wp-scss/#description
+
+Note in WP-SCSS : Do not use the auto enqueue of this plugin.
+
+but if you want to use the native sass compiler that can run in your local copy only, 
+remove the underscore(_) in including of partials scss
+
+------
+The tinymce.css must include only in inc/tinymce.php

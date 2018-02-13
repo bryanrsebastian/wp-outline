@@ -1,0 +1,14 @@
+If you use this theme as a group create a file with the filename
+
+custom-*.js
+
+else if you are the only one
+
+custom.js
+
+
+JavaScript of your backend
+backend.js 
+
+General JavaScript
+common.js

@@ -1,0 +1,18 @@
+***** Use this as a guide *****
+
+$labels = array(
+    'name'       => _x( '[Plural]', 'taxonomy general name' ),
+    'menu_name'  => __( '[Plural]' ),
+);
+
+register_taxonomy( '[taxonomy-slug-at-backend]',
+    array( '[post-type]' ),
+    array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => '[taxonomy-slug-at-frontend]' ),
+    )
+);

@@ -1,0 +1,17 @@
+***** Use this as a guide *****
+
+function [function_name]( $atts ) {
+	extract( 
+		shortcode_atts(
+			array(
+				[default-attributes-in-array-form]
+			), 
+			$atts
+		)
+	);
+}
+
+add_action( 'init', 'register_shortcode' );
+function register_shortcode() {
+   add_shortcode( '[short-code-slug]', '[function_name]' );
+}

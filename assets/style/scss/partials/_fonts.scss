@@ -1,0 +1,61 @@
+$montserrat: 'Montserrat', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+.thin {
+	font-weight: 100;
+}
+.light {
+	font-weight: 300;
+}
+.regular {
+	font-weight: 400;
+}
+.medium {
+	font-weight: 500;
+}
+.semi-bold {
+	font-weight: 600;
+}
+.bold {
+	font-weight: 700;
+}
+.extra-bold {
+	font-weight: 800;
+}
+.black {
+	font-weight: 900;
+}
+
+/* Montserrat Font */
+.montserrat {
+	font-family: $montserrat;
+}
+.montserrat-thin {
+	font-family: $montserrat;
+	font-weight: 100;
+}
+.montserrat-light {
+	font-family: $montserrat;
+	font-weight: 300;
+}
+.montserrat-regular {
+	font-family: $montserrat;
+	font-weight: 300;
+}
+.montserrat-bold {
+	font-family: $montserrat;
+	font-weight: 700;
+}
+
+/* Open Sans Font */
+.opensans {
+	font-family: $opensans;
+}
+.opensans-regular {
+	font-family: $opensans;
+	font-weight: 400;
+}
+.opensans-semi-bold {
+	font-family: $opensans;
+	font-weight: 600;
+}

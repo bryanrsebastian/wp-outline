@@ -1,0 +1,3 @@
+Place your page template in this folder and 
+to use that template placa a comment /* Template Name: [your_template_name] */
+after your php open tag

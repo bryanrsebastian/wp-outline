@@ -1,0 +1,10 @@
+***** Use this as a guide *****
+add_action( 'pre_get_posts', '[function_name]' ); 
+function [function_name]( $query ) {
+	/* Statement */
+	if ( ! is_admin() && $query->is_main_query() && ( is_post_type_archive ( 'post_type' ) ) {
+		# code...
+	}
+
+	return $query;
+};
