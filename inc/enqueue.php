@@ -6,11 +6,6 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
     add_action('wp_enqueue_scripts','enqueue_style_script');
     function enqueue_style_script() {
         /* 
-         * Register/Hook Fonts
-         */ 
-        wp_enqueue_style( 'font-roboto-css','//fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Open+Sans:400,600' );
-
-        /* 
          * Register/Hook Styles
          */ 
         
