@@ -1,3 +1,10 @@
 Collection of your fonts
 
-For your reference in including a downloaded fonts https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
+@font-face {
+    font-family: RobotoRegular;
+    src: url( "Roboto/Roboto-Regular.ttf" );
+}
+
+h1 {
+	font-family: RobotoRegular
+}

@@ -1,61 +1,21 @@
-$montserrat: 'Montserrat', sans-serif;
-$opensans: 'Open Sans', sans-serif;
+$links: '../../fonts';
 
-.thin {
-    font-weight: 100;
-}
-.light {
-    font-weight: 300;
-}
-.regular {
-    font-weight: 400;
-}
-.medium {
-    font-weight: 500;
-}
-.semi-bold {
-    font-weight: 600;
-}
-.bold {
-    font-weight: 700;
-}
-.extra-bold {
-    font-weight: 800;
-}
-.black {
-    font-weight: 900;
+@font-face {
+    font-family: RobotoRegular;
+    src: url( "#{$links}/Roboto/Roboto-Regular.ttf" );
 }
 
-/* Montserrat Font */
-.montserrat {
-    font-family: $montserrat;
-}
-.montserrat-thin {
-    font-family: $montserrat;
-    font-weight: 100;
-}
-.montserrat-light {
-    font-family: $montserrat;
-    font-weight: 300;
-}
-.montserrat-regular {
-    font-family: $montserrat;
-    font-weight: 300;
-}
-.montserrat-bold {
-    font-family: $montserrat;
-    font-weight: 700;
+@font-face {
+    font-family: RobotoMedium;
+    src: url( "#{$links}/Roboto/Roboto-Medium.ttf" );
 }
 
-/* Open Sans Font */
-.opensans {
-    font-family: $opensans;
+@font-face {
+    font-family: RobotoBold;
+    src: url( "#{$links}/Roboto/Roboto-Bold.ttf" );
 }
-.opensans-regular {
-    font-family: $opensans;
-    font-weight: 400;
-}
-.opensans-semi-bold {
-    font-family: $opensans;
-    font-weight: 600;
+
+@font-face {
+    font-family: LatoRegular;
+    src: url( "#{$links}/Lato/Lato-Regular.ttf" );
 }
