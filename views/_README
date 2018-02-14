@@ -3,7 +3,7 @@
 Place your whole content in this folder and use the function...
 
 $args = [
-	'key1' => 'val1'
+    'key1' => 'val1'
 ];
 view( '[name-of-the-file]', $args )
 view( '[name-of-the-file]', $args )

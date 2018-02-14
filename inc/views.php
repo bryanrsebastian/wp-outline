@@ -20,27 +20,27 @@
  * 
  * @param  [string] $template [Name of the file without file extension]
  * @param  [array]  $vars     [The variables to be passed into the view]
- * @return [void]			  [Include partial file and enable the passing of variables]
+ * @return [void]             [Include partial file and enable the passing of variables]
  */
 if ( ! function_exists( 'include_partial' ) ) {
-	function view( $template, $vars = array() ) {
-		// Cache
-		static $views = array();
+    function view( $template, $vars = array() ) {
+        // Cache
+        static $views = array();
 
-		$path = get_template_directory() . '/views/' . str_replace('.', DIRECTORY_SEPARATOR, $template) . '.php';
-		if (in_array($path, $views)) 
-		{
-			extract($vars);
-			include $path;
-		}
-		else 
-		{
-			if (file_exists($path)) 
-			{
-				$views[] = $path;
-				extract($vars);
-				include $path;
-			}	
-		}
-	}
+        $path = get_template_directory() . '/views/' . str_replace('.', DIRECTORY_SEPARATOR, $template) . '.php';
+        if (in_array($path, $views)) 
+        {
+            extract($vars);
+            include $path;
+        }
+        else 
+        {
+            if (file_exists($path)) 
+            {
+                $views[] = $path;
+                extract($vars);
+                include $path;
+            }   
+        }
+    }
 }

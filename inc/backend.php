@@ -4,50 +4,50 @@
  */
 add_action("login_head", "change_my_wp_login_image");
 function change_my_wp_login_image() {
-	/**
-	 * Change the [primarycolor] [secondarycolor] [eventsecondarycolor]
-	 * depends on the color scheme of your project
-	 */
-	echo "
-	<style>
-		.wp-core-ui {
-			background: #fff;
-		}
-		.wp-core-ui #login h1 a {
-			background: url('".get_bloginfo('template_url')."/assets/imgs/logo.png') center no-repeat;
-			height: 115px;
-			width: 100%; 
-			margin-bottom: 10px;
-			background-size: contain; 
-		}
-		.wp-core-ui.login form {
-			background: [primarycolor];
-			box-shadow: none;
-		}
-		.wp-core-ui.login form p label {
-			color: #fff;
-		}
-		.wp-core-ui.login form p label input.input:focus,
-		.wp-core-ui.login form p label input[type=checkbox]:focus {
-			border-color: [secondarycolor];
-			box-shadow: none;
-		}
-		.wp-core-ui.login form p label input[type=checkbox]:checked:before {
-			color: [secondarycolor];
-		}
-		.wp-core-ui #login .button-primary { 
-			text-shadow: 0 0 0; 
-			color: #fff;
-			background: [secondarycolor];
-		    border: 0;
-		    box-shadow: none;
-		}
-		.wp-core-ui #login .button-primary:hover,
-		.wp-core-ui #login .button-primary:focus {
-			background: [eventsecondarycolor];
-		}
-	</style>
-	";
+    /**
+     * Change the [primarycolor] [secondarycolor] [eventsecondarycolor]
+     * depends on the color scheme of your project
+     */
+    echo "
+    <style>
+        .wp-core-ui {
+            background: #fff;
+        }
+        .wp-core-ui #login h1 a {
+            background: url('".get_bloginfo('template_url')."/assets/imgs/logo.png') center no-repeat;
+            height: 115px;
+            width: 100%; 
+            margin-bottom: 10px;
+            background-size: contain; 
+        }
+        .wp-core-ui.login form {
+            background: [primarycolor];
+            box-shadow: none;
+        }
+        .wp-core-ui.login form p label {
+            color: #fff;
+        }
+        .wp-core-ui.login form p label input.input:focus,
+        .wp-core-ui.login form p label input[type=checkbox]:focus {
+            border-color: [secondarycolor];
+            box-shadow: none;
+        }
+        .wp-core-ui.login form p label input[type=checkbox]:checked:before {
+            color: [secondarycolor];
+        }
+        .wp-core-ui #login .button-primary { 
+            text-shadow: 0 0 0; 
+            color: #fff;
+            background: [secondarycolor];
+            border: 0;
+            box-shadow: none;
+        }
+        .wp-core-ui #login .button-primary:hover,
+        .wp-core-ui #login .button-primary:focus {
+            background: [eventsecondarycolor];
+        }
+    </style>
+    ";
 }
 
 /**
@@ -55,7 +55,7 @@ function change_my_wp_login_image() {
  */
 add_filter('login_headerurl','loginpage_custom_link');
 function loginpage_custom_link() {
-	return site_url();
+    return site_url();
 }
 
 /**
@@ -63,7 +63,7 @@ function loginpage_custom_link() {
  */
 add_filter('login_headertitle', 'change_title_on_logo');
 function change_title_on_logo() {
-	return site_url();
+    return site_url();
 }
 
 /**
@@ -92,10 +92,10 @@ function annointed_admin_bar_remove() {
  */
 add_action( 'do_meta_boxes', 'remove_revolution_slider_meta_boxes' );
 function remove_revolution_slider_meta_boxes() {
-	$post_types = get_post_types();
-	foreach ($post_types as $post_type ) {
-		remove_meta_box( 'mymetabox_revslider_0', $post_type, 'normal' );
-	}
+    $post_types = get_post_types();
+    foreach ($post_types as $post_type ) {
+        remove_meta_box( 'mymetabox_revslider_0', $post_type, 'normal' );
+    }
 }
 
 /**
@@ -103,10 +103,10 @@ function remove_revolution_slider_meta_boxes() {
  */
 add_action( 'wp_dashboard_setup', 'function_remove_ataglance' );
 function function_remove_ataglance() { 
-	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' ); 
-	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' ); 
-	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' ); 
+    remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' ); 
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
 } 
 
 /**
@@ -121,32 +121,32 @@ function function_remove_ataglance() {
  */
 // add_action('admin_menu', 'remove_admin_menus', 102);
 function remove_admin_menus() {
-	global $submenu;
-	
-	unset($submenu['themes.php'][6]); 
-	//remove_menu_page( 'edit.php' );  // Posts
-	remove_menu_page( 'link-manager.php' ); // Links
-	remove_menu_page( 'edit-comments.php' ); // Comments
-	remove_menu_page( 'plugins.php' ); // Plugins
-	//remove_menu_page( 'users.php' ); // Users
-	// remove_menu_page( 'tools.php' ); // Tools
-	//remove_menu_page(‘options-general.php’); // Settings
+    global $submenu;
+    
+    unset($submenu['themes.php'][6]); 
+    //remove_menu_page( 'edit.php' );  // Posts
+    remove_menu_page( 'link-manager.php' ); // Links
+    remove_menu_page( 'edit-comments.php' ); // Comments
+    remove_menu_page( 'plugins.php' ); // Plugins
+    //remove_menu_page( 'users.php' ); // Users
+    // remove_menu_page( 'tools.php' ); // Tools
+    //remove_menu_page(‘options-general.php’); // Settings
 
-	remove_submenu_page ( 'index.php', 'update-core.php' ); //Dashboard->Updates
-	remove_submenu_page ( 'themes.php', 'themes.php' ); // Appearance-->Themes
-	//remove_submenu_page ( 'themes.php', 'widgets.php' ); // Appearance-->Widgets
-	remove_submenu_page ( 'themes.php', 'theme-editor.php' ); // Appearance-->Editor
-	remove_submenu_page ( 'themes.php', 'customize.php' ); // Appearance-->Editor
-	remove_submenu_page ( 'options-general.php', 'options-general.php' ); // Settings->General
-	remove_submenu_page ( 'options-general.php', 'options-writing.php' ); // Settings->Writing
-	remove_submenu_page ( 'options-general.php', 'options-reading.php' ); // Settings->Reading
-	remove_submenu_page ( 'options-general.php', 'options-discussion.php' ); // Settings->Discussion
-	remove_submenu_page ( 'options-general.php', 'options-media.php' ); // Settings->Media
-	remove_submenu_page ( 'options-general.php', 'options-privacy.php' ); // Settings->Privacy
+    remove_submenu_page ( 'index.php', 'update-core.php' ); //Dashboard->Updates
+    remove_submenu_page ( 'themes.php', 'themes.php' ); // Appearance-->Themes
+    //remove_submenu_page ( 'themes.php', 'widgets.php' ); // Appearance-->Widgets
+    remove_submenu_page ( 'themes.php', 'theme-editor.php' ); // Appearance-->Editor
+    remove_submenu_page ( 'themes.php', 'customize.php' ); // Appearance-->Editor
+    remove_submenu_page ( 'options-general.php', 'options-general.php' ); // Settings->General
+    remove_submenu_page ( 'options-general.php', 'options-writing.php' ); // Settings->Writing
+    remove_submenu_page ( 'options-general.php', 'options-reading.php' ); // Settings->Reading
+    remove_submenu_page ( 'options-general.php', 'options-discussion.php' ); // Settings->Discussion
+    remove_submenu_page ( 'options-general.php', 'options-media.php' ); // Settings->Media
+    remove_submenu_page ( 'options-general.php', 'options-privacy.php' ); // Settings->Privacy
 
-	remove_submenu_page ( 'plugins.php', 'plugin-editor.php' ); // Plugins->Editor
+    remove_submenu_page ( 'plugins.php', 'plugin-editor.php' ); // Plugins->Editor
 
-	remove_submenu_page( 'options-general.php', 'tinymce-advanced' );
+    remove_submenu_page( 'options-general.php', 'tinymce-advanced' );
 
-	remove_menu_page( 'edit.php?post_type=acf' );
+    remove_menu_page( 'edit.php?post_type=acf' );
 }
