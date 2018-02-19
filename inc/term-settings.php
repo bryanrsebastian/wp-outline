@@ -1,4 +1,6 @@
 <?php
+if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
 * Disable parent term and automatic sorting of term
 **/

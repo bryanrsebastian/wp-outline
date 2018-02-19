@@ -1,4 +1,6 @@
 <?php
+if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
  * To use this file just type view( 'pagination' );
  */

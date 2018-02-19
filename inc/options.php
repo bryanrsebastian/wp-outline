@@ -1,4 +1,6 @@
 <?php
+if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
  * Add acf option page in every sidebar menu in wordpress backend.
  * Note: You must have ACF first with Option
