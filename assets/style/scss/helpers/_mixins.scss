@@ -1,0 +1,9 @@
+@mixin transition( $param... ) {
+    -webkit-transition: $param;
+    transition: $param;
+}
+
+@mixin valign_dinlineblock( $param... ) {
+    display: inline-block;
+    vertical-align: $param;
+}
