@@ -7,4 +7,4 @@ function [function_name]( $query ) {
     }
 
     return $query;
-};
+}

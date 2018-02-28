@@ -1,0 +1,35 @@
+@mixin transition( $param... ) {
+    -webkit-transition: $param;
+    transition: $param;
+}
+
+@mixin valign_dinlineblock( $param... ) {
+    display: inline-block;
+    vertical-align: $param;
+}
+
+@mixin absolute_vertical_middle() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin absolute_horizontal_middle() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin absolute_full_center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flex_full_center() {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
