@@ -29,6 +29,106 @@ a {
 
     outline: none !important;
 }
+
+.alignleft {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block; 
+    float: none;
+    margin: 0 auto;
+}
+
+.show-grid {
+    margin-bottom: 15px;
+}
+
+.show-grid-2 {
+    margin-bottom: 20px;
+}
+
+.show-grid-3 {
+    margin-bottom: 30px;
+}
+
+.show-grid-4 {
+    margin-bottom: 40px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.no-pad-lr {
+    padding-right: 0; 
+    padding-left: 0;
+}
+
+.no-pad-tb {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.no-pad-top {
+    padding-top: 0;
+}
+
+.no-pad-right {
+    padding-right: 0;
+}
+
+.no-pad-bottom {
+    padding-bottom: 0;
+}
+
+.no-pad-left {
+    padding-left: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.auto-margin {
+    margin: auto;
+}
+
+.no-mar-lr {
+    margin-right: 0; 
+    margin-left: 0;
+}
+
+.no-mar-tb {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.no-mar-top {
+    margin-top: 0;
+}
+
+.no-mar-right {
+    margin-right: 0;
+}
+
+.no-mar-bottom {
+    margin-bottom: 0;
+}
+
+.no-mar-left {
+    margin-left: 0;
+}
 /* Initial Style */
 
 /* Default Effects */
@@ -93,6 +193,7 @@ a {
         width: 20%;
     }
 }/* 5 Column */
+
 
 
 /* Contact Form 7 Notification Style */
@@ -167,6 +268,7 @@ a {
 }/* Archive */
 
 
+
 /* Single */
 .__single_container {
     padding: 75px 0;
@@ -177,6 +279,7 @@ a {
         }
     }
 }/* Single */
+
 
 
 /* 404 */
@@ -193,6 +296,7 @@ a {
         font-size: 50px;
     }
 }/* 404 */
+
 
 
 /* Responsive */
