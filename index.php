@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
     <!-- CONTENT -->
-    <div id="body">
+    <main id="body">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -10,5 +10,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 <?php get_footer(); ?>
