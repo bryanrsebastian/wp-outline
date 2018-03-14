@@ -45,3 +45,11 @@ if ( ! function_exists( 'checker' ) ) {
  * Rename the function get_template_directory_uri()
  */
 define( 'THEME_URL' , get_template_directory_uri() );
+
+/**
+ * Change the format of the email into HTML
+ */
+function wpse27856_set_content_type(){
+    return "text/html";
+}
+add_filter( 'wp_mail_content_type','wpse27856_set_content_type' );
