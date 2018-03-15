@@ -12,7 +12,7 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
          */ 
         
         /* Third Party Styles */
-        wp_enqueue_style('font-awesome', THEME_URL .'/vendors/font-awesome/css/font-awesome.min.css');
+        wp_enqueue_style('ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
         wp_enqueue_style('bootstrap4-beta', THEME_URL .'/vendors/bootstrap4-beta/dist/css/bootstrap.min.css');
         wp_enqueue_style('sweetalert2', THEME_URL .'/vendors/sweetalert2/dist/sweetalert2.min.css');
         
