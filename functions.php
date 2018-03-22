@@ -43,6 +43,11 @@ include_once( 'inc/theme-support.php' );
 include_once( 'inc/menus.php' );
 
 /**
+ * Adding of widgets
+ */
+include_once( 'inc/widgets.php' );
+
+/**
  * Add a class in your body tag
  *
  * Note: Not required to edit this
