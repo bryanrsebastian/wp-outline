@@ -225,6 +225,23 @@ a {
 .wpcf7-validation-errors {
     background: #e5d92e;
 }
+
+.wpcf7-form-control-wrap {
+    > div {
+        > div {
+            margin: 0 auto 20px;
+        }
+    }
+}
+
+@media ( max-width: 500px ) {
+    .g-recaptcha {
+        transform:scale(0.77);
+        -webkit-transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
+}
 /* Contact Form 7 Notification Style */
 
 /* Archive */

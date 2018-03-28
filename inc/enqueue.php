@@ -106,3 +106,9 @@ if ( ! function_exists( 'enqueue_admin_style_script' ) ) {
         wp_enqueue_script( 'backend' );
     }
 }
+
+add_filter('style_loader_tag', 'myplugin_remove_type_attr', 10, 2);
+add_filter('script_loader_tag', 'myplugin_remove_type_attr', 10, 2);
+function myplugin_remove_type_attr($tag, $handle) {
+    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+}

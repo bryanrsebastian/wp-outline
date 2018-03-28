@@ -8,7 +8,7 @@ if ( ! function_exists( 'global_js_var' ) ) {
     add_action('wp_head','global_js_var');
     function global_js_var() {
     ?>
-        <script type="text/javascript">
+        <script>
             var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
             var themeurl = '<?php echo get_template_directory_uri(); ?>';
         </script>
