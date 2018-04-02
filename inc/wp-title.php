@@ -1,6 +1,4 @@
 <?php
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 /**
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.

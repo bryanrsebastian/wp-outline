@@ -1,8 +1,4 @@
-<?php
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-get_header(); 
-?>
+<?php get_header() ?>
 
 <main class="__page_not_found text-center">
     <div class="container">

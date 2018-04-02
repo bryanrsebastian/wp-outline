@@ -1,6 +1,4 @@
 <?php
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-    
 /**
  * Include assets before get_footer()
  * Enqueue Style/Script for specific page

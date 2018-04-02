@@ -1,6 +1,4 @@
 <?php
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 /**
  * Add general category in your page post type
  **/

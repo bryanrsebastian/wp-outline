@@ -1,6 +1,8 @@
-<?php if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+<?php
+if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-<?php get_header(); ?>
+get_header();
+?>
     <!-- CONTENT -->
     <main id="body">
         <div class="container">
@@ -11,4 +13,4 @@
             </div>
         </div>
     </main>
-<?php get_footer(); ?>
+<?php get_footer();

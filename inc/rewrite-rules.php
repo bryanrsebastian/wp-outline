@@ -1,6 +1,4 @@
 <?php
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 /**
  * Add rules in existing rule
  * @param  array $rules    existing rule

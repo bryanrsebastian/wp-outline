@@ -1,10 +1,4 @@
-<?php
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-/* Exit if accessed directly */
-if ( ! defined( 'ABSPATH' ) ) 
-    exit;
-    
+<?php   
 /*
 * Add custom image size
 * add_image_size( string $name, int $width, int $height, bool|array $crop = false )

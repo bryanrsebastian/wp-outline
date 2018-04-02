@@ -1,5 +1,3 @@
-<?php if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
-
 <?php get_header(); ?>
 
     <h2>PAGE(page.php) - remove this in production</h2>
