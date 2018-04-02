@@ -227,19 +227,30 @@ a {
 }
 
 .wpcf7-form-control-wrap {
-    > div {
+    .g-recaptcha {
         > div {
-            margin: 0 auto 20px;
+            margin: 0 auto 10px;
         }
+    }
+    .wpcf7-not-valid-tip {
+        text-align: center;
+        margin-bottom: 10px;
     }
 }
 
 @media ( max-width: 500px ) {
-    .g-recaptcha {
-        transform:scale(0.77);
-        -webkit-transform:scale(0.77);
-        transform-origin:0 0;
-        -webkit-transform-origin:0 0;
+    .wpcf7-form-control-wrap {
+        width: 234px;
+        margin: auto;
+        .g-recaptcha {
+            transform:scale(0.77);
+            -webkit-transform:scale(0.77);
+            transform-origin:0 0;
+            -webkit-transform-origin:0 0;
+            > div {
+                margin: 0 auto;
+            }
+        }
     }
 }
 /* Contact Form 7 Notification Style */
