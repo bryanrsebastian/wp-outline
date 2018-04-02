@@ -5,42 +5,49 @@
 add_action("login_head", "change_my_wp_login_image");
 function change_my_wp_login_image() {
     /**
-     * Change the [primarycolor] [secondarycolor] [eventsecondarycolor]
+     * Change the [primary_color] [secondary_color] [eventsecondarycolor]
      * depends on the color scheme of your project
      */
     echo "
     <style>
         .wp-core-ui {
-            background: #fff;
+            background: [secondary_color];
+        }
+        .wp-core-ui #login h1 {
+            outline: none;
         }
         .wp-core-ui #login h1 a {
-            background: url('".get_bloginfo('template_url')."/assets/imgs/logo.png') center no-repeat;
-            height: 115px;
+            background: url('".get_bloginfo('template_url')."/assets/imgs/logo.jpg') center no-repeat;
+            height: 83px;
             width: 100%; 
             margin-bottom: 10px;
             background-size: contain; 
+            box-shadow: none;
         }
         .wp-core-ui.login form {
-            background: [primarycolor];
+            background: [primary_color];
             box-shadow: none;
         }
         .wp-core-ui.login form p label {
-            color: #fff;
+            color: [secondary_color];
         }
         .wp-core-ui.login form p label input.input:focus,
         .wp-core-ui.login form p label input[type=checkbox]:focus {
-            border-color: [secondarycolor];
+            border-color: [primary_color];
             box-shadow: none;
         }
         .wp-core-ui.login form p label input[type=checkbox]:checked:before {
-            color: [secondarycolor];
+            color: [primary_color];
         }
         .wp-core-ui #login .button-primary { 
             text-shadow: 0 0 0; 
-            color: #fff;
-            background: [secondarycolor];
+            color: [primary_color];
+            font-weight: 500;
+            background: [secondary_color];
             border: 0;
             box-shadow: none;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
         }
         .wp-core-ui #login .button-primary:hover,
         .wp-core-ui #login .button-primary:focus {
