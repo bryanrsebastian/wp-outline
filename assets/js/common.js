@@ -16,6 +16,8 @@
             background: "transparent",
             autohidemode: true
         };
+
+        $( 'body' ).niceScroll( args );
     /* Nicescroll */
 
     autoHeight( '.archive-container .details' );
