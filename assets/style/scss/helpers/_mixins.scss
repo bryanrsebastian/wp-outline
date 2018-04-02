@@ -1,11 +1,47 @@
-@mixin transition( $param... ) {
-    -webkit-transition: $param;
-    transition: $param;
+@mixin max_width( $param... ) {
+    @media ( max-width: $param ) {
+        @content
+    }
 }
 
-@mixin valign_dinlineblock( $param... ) {
+@mixin min_width( $param ) {
+    @media ( min-width: $param ) {
+        @content
+    }
+}
+
+@mixin max_min_width( $max, $mix ) {
+    @media ( max-width: $max ) and ( min-width: $mix ) {
+        @content
+    }
+}
+
+@mixin max_height( $param ) {
+    @media ( max-height: $param ) {
+        @content
+    }
+}
+
+@mixin min_height( $param ) {
+    @media ( min-height: $param ) {
+        @content
+    }
+}
+
+@mixin max_min_height( $max, $mix ) {
+    @media ( max-height: $max ) and ( min-height: $mix ) {
+        @content
+    }
+}
+
+@mixin valign_dinlineblock( $param ) {
     display: inline-block;
     vertical-align: $param;
+}
+
+@mixin transition() {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 @mixin absolute_vertical_middle() {
