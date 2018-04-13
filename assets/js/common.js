@@ -20,8 +20,6 @@
         $( 'body' ).niceScroll( args );
     /* Nicescroll */
 
-    autoHeight( '.archive-container .details' );
-
     /**
      * Script On Scroll
      */
@@ -40,24 +38,10 @@
      * Script On Resize
      */
     $( window ).resize( function() {
-        autoHeight( '.archive-container .details' );
+
     } );
 
     /**
      * Functions
      */
-
-    /**
-     * Make the height of all selected class becomes automatic depends on the maximum height. 
-     * @param  {[string]} resource [selected class]
-     * @return {[void]}            [automatic change height]
-     */
-    function autoHeight( resource ) {
-        $( resource ).height( 'auto' );
-        var maxHeight = Math.max.apply( null, $( resource ).map( function() {
-            return $( this ).height();
-        } ).get() );
-
-        $( resource ).height( maxHeight );
-    }
 } ) ( jQuery )
