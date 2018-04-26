@@ -1,4 +1,4 @@
-@mixin max_width( $param... ) {
+@mixin max_width( $param ) {
     @media ( max-width: $param ) {
         @content
     }
