@@ -40,6 +40,25 @@ if ( ! function_exists( 'checker' ) ) {
 }
 
 /**
+ * Check if post is exist via post_title on specific post_type
+ * @param  [string] $post_type  [post type]
+ * @param  [string] $post_title [post title]
+ * @return [array]              [list of post]
+ */
+function post_checker( $post_type, $post_title ) {
+    global $wpdb;
+    return $wpdb->get_results(
+        $wpdb->prepare( "
+            SELECT * 
+            FROM $wpdb->posts 
+            WHERE post_type = '$post_type'
+            AND post_title = %s
+            AND post_status = 'publish'
+        ", $post_title )
+    );
+}
+
+/**
  * Rename the function get_template_directory_uri()
  */
 define( 'THEME_URL' , get_template_directory_uri() );
