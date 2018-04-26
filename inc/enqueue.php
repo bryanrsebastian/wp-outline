@@ -63,7 +63,7 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
             /**
              * Enqueue your style/script only @ IE
              */
-            wp_enqueue_style('ie', THEME_URL .'/assets/style/css/ie.css');
+            wp_enqueue_style('explorer', THEME_URL .'/assets/style/css/ie.css');
         } 
         elseif( preg_match( '/firefox/i', $u_agent ) ) {
             /**
