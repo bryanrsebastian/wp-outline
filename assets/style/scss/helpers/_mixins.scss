@@ -1,36 +1,36 @@
 @mixin max_width( $param ) {
     @media ( max-width: $param ) {
-        @content
+        @content;
     }
 }
 
 @mixin min_width( $param ) {
     @media ( min-width: $param ) {
-        @content
+        @content;
     }
 }
 
 @mixin max_min_width( $max, $mix ) {
     @media ( max-width: $max ) and ( min-width: $mix ) {
-        @content
+        @content;
     }
 }
 
 @mixin max_height( $param ) {
     @media ( max-height: $param ) {
-        @content
+        @content;
     }
 }
 
 @mixin min_height( $param ) {
     @media ( min-height: $param ) {
-        @content
+        @content;
     }
 }
 
 @mixin max_min_height( $max, $mix ) {
     @media ( max-height: $max ) and ( min-height: $mix ) {
-        @content
+        @content;
     }
 }
 
