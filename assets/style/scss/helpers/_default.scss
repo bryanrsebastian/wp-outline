@@ -167,46 +167,6 @@ a {
 }
 /* No Result */
 
-/* 5 Column */
-.__col_xs_5items,
-.__col_sm_5items,
-.__col_md_5items,
-.__col_lg_5items {
-    position: relative;
-
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 0;
-}
-
-.__col_xs_5items {
-    float: left;
-    width: 20%;
-}
-
-@media (min-width: 768px) {
-    .__col_sm_5items {
-        float: left;
-        width: 20%;
-    }
-}
-
-@media (min-width: 992px) {
-    .__col_md_5items {
-        float: left;
-        width: 20%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .__col_lg_5items {
-        float: left;
-        width: 20%;
-    }
-}/* 5 Column */
-
-
-
 /* Contact Form 7 Notification Style */
 .wpcf7-response-output {
     padding: 20px !important;
@@ -236,9 +196,22 @@ a {
 }
 
 .wpcf7-form-control-wrap {
+    @media ( max-width: 500px ) {
+        width: 234px;
+        margin: auto;
+    }
     .g-recaptcha {
+        @media ( max-width: 500px ) {
+            transform:scale(0.77);
+            -webkit-transform:scale(0.77);
+            transform-origin:0 0;
+            -webkit-transform-origin:0 0;
+        }
         > div {
             margin: 0 auto 10px;
+            @media ( max-width: 500px ) {
+                margin: 0 auto;
+            }
         }
     }
     .wpcf7-not-valid-tip {
@@ -246,27 +219,20 @@ a {
         margin-bottom: 10px;
     }
 }
-
-@media ( max-width: 500px ) {
-    .wpcf7-form-control-wrap {
-        width: 234px;
-        margin: auto;
-        .g-recaptcha {
-            transform:scale(0.77);
-            -webkit-transform:scale(0.77);
-            transform-origin:0 0;
-            -webkit-transform-origin:0 0;
-            > div {
-                margin: 0 auto;
-            }
-        }
-    }
-}
 /* Contact Form 7 Notification Style */
 
 /* Archive */
 .__archive_container {
     padding: 75px 0;
+    @media ( max-width: 600px ) {
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        .__details {
+            height: auto !important;
+        }
+    }
 }
 
 .__post_item {
@@ -304,9 +270,8 @@ a {
             background: #eee;
         }
     }
-}/* Archive */
-
-
+}
+/* Archive */
 
 /* Single */
 .__single_container {
@@ -317,9 +282,8 @@ a {
             margin-bottom: 10px;
         }
     }
-}/* Single */
-
-
+}
+/* Single */
 
 /* 404 */
 .__page_not_found {
@@ -334,20 +298,5 @@ a {
     p {
         font-size: 50px;
     }
-}/* 404 */
-
-
-
-/* Responsive */
-@media (max-width: 600px) {
-    .__archive_container {
-        [class*="col-"] {
-            width: 100%;
-        }
-
-        .__details {
-            height: auto !important;
-        }
-    }
-}/* Responsive */
-
+}
+/* 404 */
