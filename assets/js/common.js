@@ -5,20 +5,22 @@
      * Script On Document Ready
      */
     
-    /* Nicescroll */
-        var args = {
-            cursorwidth: 4,
-            cursorcolor: '#000',
-            zindex: 9999999,
-            horizrailenabled: false,
-            cursorborderradius: 3,
-            cursorborder: "1px solid #000",
-            background: "transparent",
-            autohidemode: true
-        };
+    /* Initialize Nicescroll */
+    var args = {
+        cursorwidth: 4,
+        cursorcolor: '#000',
+        zindex: 9999999,
+        horizrailenabled: false,
+        cursorborderradius: 3,
+        cursorborder: "1px solid #000",
+        background: "transparent",
+        autohidemode: true
+    };
 
-        $( 'body' ).niceScroll( args );
-    /* Nicescroll */
+    $( 'body' ).niceScroll( args );
+    
+    /* Initialize Object Fit */
+    objectFitImages();
 
     /**
      * Script On Scroll

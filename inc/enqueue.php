@@ -31,6 +31,9 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
         wp_register_script( 'bootstrap', THEME_URL .'/vendors/bootstrap-4.0.0/js/bootstrap.min.js', array('jquery'), NULL, true );
         wp_enqueue_script( 'bootstrap' );
 
+        wp_register_script( 'object-fit', THEME_URL .'/vendors/object-fit/ofi.min.js', array('jquery'), NULL, true );
+        wp_enqueue_script( 'object-fit' );
+
         /**
          * Developer's assets
          */
