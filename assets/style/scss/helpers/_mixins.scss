@@ -1,3 +1,13 @@
+@mixin object-fit-cover {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+@mixin object-fit-contain {
+    object-fit: contain;
+    font-family: 'object-fit: contain;';
+}
+
 @mixin valign_dinlineblock( $param ) {
     display: inline-block;
     vertical-align: $param;
