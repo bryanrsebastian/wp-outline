@@ -168,55 +168,55 @@ a {
 /* No Result */
 
 /* Contact Form 7 Notification Style */
-.wpcf7-response-output {
-    padding: 20px !important;
-    margin: 0;
-    margin: 10px 0 !important;
-
-    font-weight: 700;
-
-    color: #fff;
-    border: 0 !important;
-}
-
-.wpcf7-mail-sent-ok {
-    background: #4caf50;
-}
-
-.wpcf7-mail-sent-ng {
-    background: #f44336;
-}
-
-.wpcf7-spam-blocked {
-    background: #ff9800;
-}
-
-.wpcf7-validation-errors {
-    background: #e5d92e;
-}
-
-.wpcf7-form-control-wrap {
-    @media ( max-width: 500px ) {
-        width: 234px;
-        margin: auto;
-    }
-    .g-recaptcha {
-        @media ( max-width: 500px ) {
-            transform:scale(0.77);
-            -webkit-transform:scale(0.77);
-            transform-origin:0 0;
-            -webkit-transform-origin:0 0;
-        }
-        > div {
-            margin: 0 auto 10px;
-            @media ( max-width: 500px ) {
-                margin: 0 auto;
-            }
-        }
+.wpcf7-form {
+    .wpcf7-not-valid {
+        border: 1px solid #ff0000;
     }
     .wpcf7-not-valid-tip {
-        text-align: center;
-        margin-bottom: 10px;
+        display: none;
+    }
+    .wpcf7-form-control-wrap {
+        @media ( max-width: 500px ) {
+            width: 234px;
+            margin: auto;
+        }
+        .g-recaptcha {
+            @media ( max-width: 500px ) {
+                transform:scale(0.77);
+                -webkit-transform:scale(0.77);
+                transform-origin:0 0;
+                -webkit-transform-origin:0 0;
+            }
+            > div {
+                margin: 0 auto 10px;
+                @media ( max-width: 500px ) {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .wpcf7-not-valid-tip {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    .wpcf7-response-output {
+        padding: 15px !important;
+        margin: 0;
+        margin: 10px 0 !important;
+        color: #fff;
+        border: 0 !important;
+        &.wpcf7-mail-sent-ok {
+            background: #4caf50;
+        }
+        &.wpcf7-mail-sent-ng {
+            background: #f44336;
+        }
+        &.wpcf7-spam-blocked {
+            background: #ff9800;
+        }
+        &.wpcf7-validation-errors {
+            background: #e5d92e;
+        }
     }
 }
 /* Contact Form 7 Notification Style */
