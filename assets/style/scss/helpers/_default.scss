@@ -169,11 +169,20 @@ a {
 
 /* Contact Form 7 Notification Style */
 .wpcf7-form {
-    .wpcf7-not-valid {
-        border: 1px solid #ff0000;
-    }
-    .wpcf7-not-valid-tip {
-        display: none;
+    .wpcf7-text,
+    .wpcf7-textarea {
+        width: 100%;
+        border: 1px solid #c8c8c8;
+        padding: 10px 8px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        outline: none;
+        &.wpcf7-not-valid {
+            border: 1px solid #ff0000;
+        }
+        +.wpcf7-not-valid-tip {
+            display: none;
+        }
     }
     .wpcf7-form-control-wrap {
         @media ( max-width: 500px ) {
@@ -188,7 +197,7 @@ a {
                 -webkit-transform-origin:0 0;
             }
             > div {
-                margin: 0 auto 10px;
+                margin-bottom: 25px;
                 @media ( max-width: 500px ) {
                     margin: 0 auto;
                 }
