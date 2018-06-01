@@ -31,6 +31,8 @@ function change_my_wp_login_image() {
             width: 100%;
             margin-bottom: 10px;
             background-size: contain;
+            outline: none;
+            box-shadow: none;
         }
         .wp-core-ui input {
             border: 0 !important;
