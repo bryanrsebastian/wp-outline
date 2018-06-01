@@ -5,53 +5,71 @@
 add_action("login_head", "change_my_wp_login_image");
 function change_my_wp_login_image() {
     /**
-     * Change the [primary_color] [secondary_color] [eventsecondarycolor]
-     * depends on the color scheme of your project
+     * Change this word according to the desired value
+     * background_image the path background image of the login
+     * logo_image       the path logo of the login
+     * btn_color        the color of the login button
+     * btn_color        the color of the login button
+     * login_color      the background color of the login form
      */
     echo "
     <style>
         .wp-core-ui {
-            background: [secondary_color];
+            background: url(background_image) center/cover no-repeat;
         }
-        .wp-core-ui #login h1 {
-            outline: none;
+        .wp-core-ui #login {
+            background: login_color;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem;
         }
         .wp-core-ui #login h1 a {
-            background: url('".get_bloginfo('template_url')."/assets/imgs/logo.jpg') center no-repeat;
-            height: 83px;
-            width: 100%; 
+            background: url(logo_image) center no-repeat;
+            height: 115px;
+            width: 100%;
             margin-bottom: 10px;
-            background-size: contain; 
-            box-shadow: none;
+            background-size: contain;
         }
-        .wp-core-ui.login form {
-            background: [primary_color];
-            box-shadow: none;
+        .wp-core-ui input {
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none;
         }
-        .wp-core-ui.login form p label {
-            color: [secondary_color];
-        }
-        .wp-core-ui.login form p label input.input:focus,
-        .wp-core-ui.login form p label input[type=checkbox]:focus {
-            border-color: [primary_color];
-            box-shadow: none;
-        }
-        .wp-core-ui.login form p label input[type=checkbox]:checked:before {
-            color: [primary_color];
-        }
-        .wp-core-ui #login .button-primary { 
-            text-shadow: 0 0 0; 
-            color: [primary_color];
-            font-weight: 500;
-            background: [secondary_color];
-            border: 0;
-            box-shadow: none;
+        .wp-core-ui .button-primary {
+            text-shadow: 0 0 0;
+            color: #222;
+            background: btn_color;
+            border-radius: 0;
+            width: 100px;
+            opacity: 1;
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
         }
-        .wp-core-ui #login .button-primary:hover,
-        .wp-core-ui #login .button-primary:focus {
-            background: [eventsecondarycolor];
+        .wp-core-ui .button-primary:hover {
+            color: #222;
+            background: btn_color;
+            opacity: 0.9;
+        }
+        .wp-core-ui form {
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
+        .wp-core-ui form p label {
+            color: #fff;
+        }
+        .wp-core-ui form p label input[type=checkbox]:checked:before {
+            color: #222;
+        }
+        .wp-core-ui #nav,
+        .wp-core-ui #backtoblog {
+            padding-left: 0;
+        }
+        .wp-core-ui #nav a,
+        .wp-core-ui #backtoblog a {
+            color: #fff;
         }
     </style>
     ";
