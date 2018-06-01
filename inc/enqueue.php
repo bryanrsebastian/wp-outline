@@ -15,9 +15,8 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
         wp_register_script( 'nicescroll', THEME_URL .'/vendors/nicescroll-3.7.6/jquery.nicescroll.min.js', array('jquery'), NULL, true );
         wp_enqueue_script( 'nicescroll' );
 
-        /* Ionicons */
-        // wp_enqueue_style('ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
-        wp_enqueue_style('ionicons', THEME_URL .'/vendors/ionicons-2.0.1/ionicons.min.css');
+        /* Fontawesome */
+        wp_enqueue_style( 'fontawesome', '//use.fontawesome.com/releases/v5.0.13/css/all.css' );
 
         /* Bootstrap */
         // wp_register_script( 'popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'), NULL, true );
