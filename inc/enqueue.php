@@ -35,6 +35,7 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
          */
         /* Styles */
         wp_enqueue_style('general', THEME_URL .'/assets/style/css/general.css');
+        wp_enqueue_style('frontend-custom-tinymce', THEME_URL .'/assets/style/css/tinymce.css');
 
         /* JasvaScript */        
         /**
@@ -102,6 +103,11 @@ if ( ! function_exists( 'enqueue_admin_style_script' ) ) {
          */
         wp_register_script( 'backend', THEME_URL .'/assets/js/backend.js', array('jquery'), NULL, true );
         wp_enqueue_script( 'backend' );
+
+        /* 
+         * Register/Hook Style for backend
+         */
+        wp_enqueue_style('backend-custom-tinymce', THEME_URL .'/assets/style/css/tinymce.css');
     }
 }
 

@@ -31,17 +31,17 @@ if ( ! function_exists( 'wpex_mce_text_sizes' ) ) {
 if ( ! function_exists( 'wpex_mce_google_fonts_array' ) ) {
     add_filter( 'tiny_mce_before_init', 'wpex_mce_google_fonts_array' );
     function wpex_mce_google_fonts_array( $init_array ) {
-        $init_array['font_formats'] = 'Montserrat=Montserrat; OpenSans=Open Sans';
+        $init_array['font_formats'] = 'RobotoRegular=RobotoRegular; RobotoMedium=RobotoMedium; RobotoBold=RobotoBold; LatoRegular=LatoRegular';
 
         return $init_array;
     }
 }
 
 /**
- * Add font family
+ * Add online font family
  */
 if ( ! function_exists( 'wpex_mce_google_fonts_styles' ) ) {
-    add_action( 'init', 'wpex_mce_google_fonts_styles' );
+    // add_action( 'init', 'wpex_mce_google_fonts_styles' );
     function wpex_mce_google_fonts_styles() {
         $fonts = 'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Open+Sans:400,600';
         
@@ -58,9 +58,7 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 function my_mce_before_init_insert_formats( $init_array ) { 
     /* Class name that defined in css file in your 'plugin_mce_css' function */
     $classes = array(
-        'thin', 'light', 'regular', 'medium', 'semi-bold', 'bold', 'extra-bold', 'black',
-        'montserrat', 'montserrat-thin', 'montserrat-light', 'montserrat-regular', 'montserrat-bold',
-        'opensans', 'opensans-regular', 'opensans-semi-bold'
+        'custom-format'
     );
     
     $style_formats = array();
