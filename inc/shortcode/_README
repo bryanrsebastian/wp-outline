@@ -9,6 +9,12 @@ function [function_name]( $atts ) {
             $atts
         )
     );
+
+    ob_start();
+
+    // statement
+
+    return ob_get_clean();
 }
 
 add_action( 'init', 'register_shortcode' );
